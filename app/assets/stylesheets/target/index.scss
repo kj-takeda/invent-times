@@ -1,0 +1,84 @@
+.header{
+  border:solid;
+  height:100px;
+  width:100%;
+  display:flex;
+  &__logo{
+    height:100px;
+    width:20%;
+    border:solid;
+  }
+  &__title{
+    height:100px;
+    width:20%;
+    line-height: 100px;
+    text-align: center;
+    text-shadow: 1px 2px 3px #808080;
+    font-size:40px;
+    border:solid;
+}
+&__line{
+  height:100px;
+  width:50%;
+  border:solid;
+  &__type1{
+    width:10%;
+    height:10px;
+    background-color:red;
+  }
+  &__type2{
+    width:20%;
+    height:10px;
+    background-color:pink;
+  }
+  &__type3{
+    width:65%;
+    height:10px;
+    background-color:palevioletred;
+  }
+  &__type4{
+    width:85%;
+    height:10px;
+    background-color:yellow;
+  }
+  &__type5{
+    width:75%;
+    height:10px;
+    background-color:bisque;
+  }
+  &__type6{
+    width:100%;
+    height:10px;
+    background-color:lightblue;
+  }
+  &__type7{
+    width:65%;
+    height:10px;
+    background-color:lightgreen;
+  }
+  &__type8{
+    width:50%;
+    height:10px;
+  }
+  &__type9{
+    width:70%;
+    height:10px;
+    background-color:grey;
+  }
+
+
+
+
+}
+&__user-info{
+  height:100px;
+  width:10%;
+  border:solid;
+}
+
+}
+
+.headr-logo{
+  height:100%;
+  width:100%;
+}
