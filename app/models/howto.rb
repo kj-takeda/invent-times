@@ -1,0 +1,2 @@
+class Howto < ApplicationRecord
+end
