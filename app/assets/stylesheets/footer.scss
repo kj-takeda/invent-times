@@ -1,0 +1,11 @@
+.footer{
+  width:1000px;
+  height:250px;
+  border:solid;
+  display:flex;
+  &__image{
+  width:500px;
+  height:250px;
+  z-index: 1;
+    }
+  }
