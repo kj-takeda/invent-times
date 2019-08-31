@@ -3,20 +3,9 @@
   height:250px;
   border:solid;
   display:flex;
-  background-color: aliceblue;
-  z-index: 2px;
   &__image{
-    width:50%;
+  width:500px;
   height:250px;
+  z-index: 1;
+    }
   }
-}
-
-.put-on-color{
-  background-color: rgba(0,0,123,0.3);
-  width:1000px;
-  height:250px;
-  border:solid;
-  position:relative;
-  top:255px;
-  z-index:2 ;
-}

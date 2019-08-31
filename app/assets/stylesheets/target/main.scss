@@ -1,0 +1,66 @@
+.main{
+  border:solid;
+  width:1000px;
+  height:800px;
+  background-color:#FFDBC9;
+  border-color:grey;
+  border-radius: 2px;
+  &__flame{
+  width:800px;
+  height:600px;
+  margin:auto;
+  background-color: #FFEEFF;
+  margin-top:50px;
+    &__word{
+      width:800px;
+      height:150px;
+      background-color: #FFEEFF;
+      &__h2{
+        margin-top:20px;
+        font-size:25px;
+        text-align: center;
+
+        
+    }
+      &__p{
+        font-size:20px;
+        text-align: center;
+
+      }
+    }
+    &__form{
+      height:400px;
+      background-color: #FFEEFF;
+      &__input{
+        height:100px;
+        width:500px;
+        margin-left:150px;
+        margin-top:20px;
+        font-size:40px;
+        border-color:#36528c;
+        border-radius: 5px;
+      }
+      &__text{
+        font-size:40px;
+        line-height:40px;
+      }
+      &__btn{
+        border-radius: 5px;
+        width:500px;
+        height:100px;
+        margin-left:150px;
+        margin-top:30px;
+        font-size:30px;
+        line-height:10px;
+        display: inline-block;
+        position: relative;
+        padding: 0.5em 1.4em;
+        text-decoration: none;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
+        border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+     }
+    }
+   }
+  }
