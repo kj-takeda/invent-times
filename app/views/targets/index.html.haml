@@ -15,6 +15,10 @@
     .header__line__type9
   .header__user-info
     %i.fa.fa-user.fa-5x
-    =link_to "ユーザー情報編集" , class:"header__user-info__li"
-    =link_to "お気に入り" , class:"header__user-info__li"
-    =link_to "ログアウト" , class:"header__user-info__li"
+    .header__user-info__ul
+      .header__user-info__ul__li
+        =link_to "ユーザー情報編集" , "" , class:"header__user-info__ul__li__link"
+      .header__user-info__ul__li
+        =link_to "お気に入り" , "" , class:"header__user-info__ul__li__link"
+      .header__user-info__ul__li
+        =link_to "ログアウト" , "" , class:"header__user-info__ul__li__link"
