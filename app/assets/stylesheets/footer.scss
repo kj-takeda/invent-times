@@ -1,0 +1,22 @@
+.footer{
+  width:1000px;
+  height:250px;
+  border:solid;
+  display:flex;
+  background-color: aliceblue;
+  z-index: 2px;
+  &__image{
+    width:50%;
+  height:250px;
+  }
+}
+
+.put-on-color{
+  background-color: rgba(0,0,123,0.3);
+  width:1000px;
+  height:250px;
+  border:solid;
+  position:relative;
+  top:255px;
+  z-index:2 ;
+}
