@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_172626) do
+ActiveRecord::Schema.define(version: 2019_08_31_194018) do
 
   create_table "howtos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment"
@@ -23,6 +23,14 @@ ActiveRecord::Schema.define(version: 2019_08_28_172626) do
     t.index ["user_id"], name: "index_howtos_on_user_id"
   end
 
+  create_table "periods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "time"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_periods_on_user_id"
+  end
+
   create_table "targets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "genre"
     t.text "title"
@@ -32,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_172626) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "time"
     t.index ["user_id"], name: "index_targets_on_user_id"
   end
 
@@ -43,6 +52,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_172626) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "interest"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
