@@ -4,7 +4,7 @@
   height:800px;
   background-color:#FFDBC9;
   border-color:grey;
-  border-radius: 2px;
+  border-radius: 10px;
   &__flame{
   width:800px;
   height:600px;
@@ -19,8 +19,6 @@
         margin-top:20px;
         font-size:25px;
         text-align: center;
-
-        
     }
       &__p{
         font-size:20px;
