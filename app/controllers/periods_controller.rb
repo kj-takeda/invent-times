@@ -8,6 +8,7 @@ class PeriodsController < ApplicationController
 
   def create
     Period.create(period_params)  
+    redirect_to controller: :targets, action: :index
   end
 
   private

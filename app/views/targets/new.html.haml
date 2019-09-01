@@ -1,0 +1,31 @@
+.new-main
+  .new-main__flame
+    .new-main__flame__text 情報を入力してユーザーに有益な投資対象を提案
+
+    .new-main__flame__form
+      = form_for(@Target) do |f|
+        .new-main__flame__form__box
+          = f.label  :genre , "ジャンルを選択してください" , class:"new-main__flame__form__box__text"
+          = f.select :genre , [["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ] , :prompt => "選択してください"
+        .new-main__flame__form__box
+          = f.label  :title , "取得可能なスキルを入力してください" , class:"new-main__flame__form__box__text"
+          = f.text_field :title , class:"new-main__flame__form__box__input" , placeholder:"(例)webエンジニアデビュー　(例)TOEIC600点以上"
+        .new-main__flame__form__box
+          = f.label  :time , "スキル取得にかかる時間を入力してください" , class:"new-main__flame__form__box__text"
+          = f.text_field :time , class:"new-main__flame__form__box__input" , placeholder:"(例)60h 100h 400h"
+          %p.box-p 時間(h)
+
+        .new-main__flame__form__box
+          = f.label  :text , "スキルに関する詳細情報を入力してください" , class:"new-main__flame__form__box__text"
+          = f.text_field :text , class:"new-main__flame__form__box__input" , placeholder:"(例)誰でも3ヵ月で出来る　センスよりコツコツ努力が重要"
+
+        .new-main__flame__form__box
+          = f.label  :url , "関連URL" , class:"new-main__flame__form__box__text"
+          = f.text_field :url , class:"new-main__flame__form__box__input" , placeholder:"https://tech-camp.in/note/"
+    
+        .new-main__flame__form__box
+          = f.label  :img , "画像情報" , class:"new-main__flame__form__box__text"
+          = f.text_field :img , class:"new-main__flame__form__box__input" , placeholder:"https://tech-camp.in/note/"
+    
+        .new-main__flame__form__box
+          = f.submit "スキル情報を投稿" , class:"new-main__flame__form__box__btn"
