@@ -7,7 +7,7 @@ class PeriodsController < ApplicationController
   end
 
   def create
-    @period = Period.create(period_params)
+    Period.create(period_params)  
   end
 
   private
