@@ -1,7 +1,8 @@
 class TargetsController < ApplicationController
-  
+  PER = 5
+
   def index
-    @targets = Target.all
+    @targets = Target.order(:time).page(params[:page]).per(PER)
   end
 
   def new

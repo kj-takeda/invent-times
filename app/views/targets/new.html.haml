@@ -3,7 +3,7 @@
     .new-main__flame__text 情報を入力してユーザーに有益な投資対象を提案
 
     .new-main__flame__form
-      = form_for(@Target) do |f|
+      = form_for(@target) do |f|
         .new-main__flame__form__box
           = f.label  :genre , "ジャンルを選択してください" , class:"new-main__flame__form__box__text"
           = f.select :genre , [["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ] , :prompt => "選択してください"
