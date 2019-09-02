@@ -1,0 +1,71 @@
+.index{
+  border:solid;
+  width:1000px;
+  min-height:1000px;
+  margin:auto;
+  background-color: #FFEEFF;
+  &__flame{
+    width:80%;
+  min-height:900px;
+  margin:auto;
+  background-color: #FFEEFF;
+  margin-top:25px;
+    &__main{
+      width:80%;
+      height:295px;
+      border:solid;
+      margin:auto;
+      background-color: #FFEEFF;
+      &__genre{
+        width:30%;
+      height:30px;
+      border:solid;
+      font-size:15px;
+      line-height:30px;
+      color:red;
+      margin-top:10px;
+      text-align: center;
+      }
+      &__time{
+        display:inline-block;
+        width:20%;
+        height:30px;
+        border:solid;
+        font-size:15px;
+        line-height:30px;
+        float:left;
+        color:gray;
+        text-align: center;
+      }
+      &__title{
+        width:70%;
+        height:30px;
+        border:solid;
+        font-size:15px;
+        line-height:30px;
+        float:left;
+        text-align: center;
+      }
+      &__img{
+        float:left;
+      }
+
+      &__btn{
+        width:30%;
+        height:50px;
+        float:left;
+        border:solid;
+        margin-left:20px;
+        margin-top:30px;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
+        border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+      
+        line-height:50px;
+        text-align:center; 
+      }
+
+    }
+    }
+  }

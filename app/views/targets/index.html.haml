@@ -1,1 +1,14 @@
-xxxxxxxxxxxx
+- @targets.each do |target|
+  .index
+    .index__flame
+      .index__flame__main
+        .index__flame__main__genre
+          = "ジャンル:#{target.genre}"
+        .index__flame__main__time
+          = "投資時間:#{target.time}"
+        .index__flame__main__title
+          = "タイトル：#{target.title}"
+        .index__flame__main__img
+          = image_tag target.img , size:'400x200'
+        .index__flame__main__btn お気に入りに追加する
+        .index__flame__main__btn 詳しく見る
