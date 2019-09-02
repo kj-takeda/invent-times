@@ -6,9 +6,10 @@
   display:flex;
   color:grey;
   border-radius: 10px;
+  margin:auto;
   &__image{
-  width:500px;
+  width:50%;
   height:250px;
   z-index: 1;
-    }
-  }
+ }
+}

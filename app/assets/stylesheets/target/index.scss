@@ -1,0 +1,77 @@
+.index{
+  border:solid;
+  width:1000px;
+  min-height:1000px;
+  margin:auto;
+  background-color: #FFEEFF;
+  color:gray;
+  border-radius: 10px;
+  &__flame{
+    width:80%;
+  min-height:900px;
+  margin:auto;
+  background-color: #FFEEFF;
+  margin-top:25px;
+  color:gray;
+  border-radius: 10px;
+    &__main{
+      width:80%;
+      height:295px;
+      border:solid;
+      margin:auto;
+      margin-top:20px;
+      background-color: #FFEEFF;
+      border-radius: 10px;
+      &__genre{
+        width:30%;
+      height:30px;
+      font-size:15px;
+      line-height:30px;
+      color:red;
+      margin-top:10px;
+      text-align: center;
+      }
+      &__time{
+        display:inline-block;
+        width:20%;
+        height:30px;
+        font-size:18px;
+        line-height:30px;
+        float:left;
+        color:gold;
+        text-align: center;
+      }
+      &__title{
+        width:70%;
+        height:30px;
+        font-size:px;
+        line-height:30px;
+        float:left;
+        text-align: center;
+      }
+      &__img{
+        float:left;
+      }
+
+      &__btn{
+        width:30%;
+        height:50px;
+        float:left;
+        border:solid;
+        margin-left:20px;
+        margin-top:30px;
+        background: #668ad8;/*ボタン色*/
+        color: #FFF;
+        border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
+        border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+        line-height:50px;
+        text-align:center; 
+      }
+
+    }
+    }
+  .index__pagenation{
+   width:50%;
+    margin:auto;
+  }
+  }
