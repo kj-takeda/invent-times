@@ -1,6 +1,4 @@
 class PeriodsController < ApplicationController
-  
-  before_action :authenticate_user!
 
   def new
     @period = Period.new
