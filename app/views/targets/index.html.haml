@@ -1,5 +1,24 @@
 .index
-  .index__count
+  .index__serch
+    .index__serch__top
+      .index__serch__top__btn.no1 ジャンルから探す
+      .index__serch__top__btn.no2 特徴から探す
+
+      .index__serch__top__box.none1
+        = form_for("") do |f|
+          = f.label :genre , "ジャンル検索" , class:"index__serch__top__box__label"
+          = f.select :genre , [["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ] , :prompt => "選択してください"
+          = f.submit class:"index__serch__top__box__btn" , value:"検索"
+
+      .index__serch__top__box.none2
+        = form_for("") do |f|
+          = f.label :genre , "特徴検索" , class:"index__serch__top__box__label"
+          = f.select :genre , [["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ] , :prompt => "選択してください"
+          = f.submit class:"index__serch__top__box__btn" , value:"検索"
+
+
+
+      
   .index__flame
     -@targets.each do |target|
       -if target.time <= current_user.periods.last.time
