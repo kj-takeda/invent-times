@@ -2,7 +2,7 @@ class TargetsController < ApplicationController
   PER = 5
 
   def index
-    @targets = Target.order("time DESC").page(params[:page]).per(PER)
+    @targets = Target.all.page(params[:page]).per(PER).limit(5)
   end
 
   def new
@@ -15,6 +15,15 @@ class TargetsController < ApplicationController
   end
 
   def show
+  end
+
+  def create
+    
+  end
+
+  def search
+    @keyword = params[:keyword]
+    @targets = Target.where(genre:@keyword).order("time DESC").page(params[:page]).per(PER)
   end
 
   private

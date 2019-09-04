@@ -9,7 +9,12 @@ Rails.application.routes.draw do
 
   root to: 'periods#new'
   resources :users
-  resources :targets
+  resources :targets do
+    collection do
+      get 'search'
+    end
+  end
+
   resources :howtos
   resources :periods
 end
