@@ -1,8 +1,8 @@
 class TargetsController < ApplicationController
-  PER = 5
 
   def index
-    @targets = Target.all.page(params[:page]).per(PER).limit(5)
+    @targets = Target.all
+    @target = Target.page(params[:page]).per(5)
   end
 
   def new
