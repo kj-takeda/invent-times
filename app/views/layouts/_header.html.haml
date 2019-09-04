@@ -19,7 +19,7 @@
     .header__btns__li
       =link_to "お気に入り" , "" , class:"header__btns__li__link"
     .header__btns__li
-      =link_to "ログアウト" , "" , class:"header__btns__li__link"
+      =link_to "ログアウト" , destroy_user_session_path , class:"header__btns__li__link" , method: :delete
 
   .header__user-info
     %i.fa.fa-user.fa-5x
