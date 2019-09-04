@@ -1,10 +1,9 @@
+jQuery(document).on('turbolinks:load', function(){
 $(function(){
-  $('.index__serch__top__box__btn').click(function () {
-    $('.index__serch__top__btn ').hide();
+  $('.index__serch__top__btn.no1').click(function () {
+    $(this).hide();
 
   })
-
-
-
-
+ });
 });
+
