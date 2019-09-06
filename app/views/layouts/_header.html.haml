@@ -22,4 +22,6 @@
       =link_to "ログアウト" , destroy_user_session_path , class:"header__btns__li__link" , method: :delete
 
   .header__user-info
-    %i.fa.fa-user.fa-5x
+    %i.fa.fa-user.fa-3x
+    .header__user-info__name
+      = current_user.name

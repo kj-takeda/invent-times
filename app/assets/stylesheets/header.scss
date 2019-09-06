@@ -91,11 +91,18 @@
 }
 
 &__user-info{
-  height:100px;
+  height:70px;
   width:10%;
   display:block;
   background-color:lightgray;
-  }
+  border:solid;
+  &__name{
+margin-top:17px;
+text-align: center;
+line-height: 25px;
+  }  
+}
+
 }
 
 .headr-logo{
@@ -103,11 +110,11 @@
   width:100%;
 }
 
-.fa-5x{
+.fa-3x{
   display:block;
   color:black;
-  height:95%;
+  height:50%;
   width:100%;
-  padding-left:10px;
+  padding-left:25px;
   padding-top:10px;
 }
