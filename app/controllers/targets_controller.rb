@@ -10,15 +10,11 @@ class TargetsController < ApplicationController
   end
 
   def create
-    Target.create(target_params)
+    @target = Target.create(target_params)
     redirect_to action: :new
   end
 
   def show
-  end
-
-  def create
-    
   end
 
   def category_search
@@ -30,7 +26,7 @@ class TargetsController < ApplicationController
 
   private
   def target_params
-    params.require(:target).permit(:genre , :title , :time , :text , :url , :img).merge(user_id: current_user.id)
+    params.require(:target).permit(:genre , :title , :time , :text , :url , :img , :feature).merge(user_id: current_user.id)
   end
 
 end

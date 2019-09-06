@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_141909) do
+ActiveRecord::Schema.define(version: 2019_09_06_101425) do
+
+  create_table "features", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "howtos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment"
@@ -41,6 +47,7 @@ ActiveRecord::Schema.define(version: 2019_09_04_141909) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "time"
+    t.text "feature"
     t.index ["user_id"], name: "index_targets_on_user_id"
   end
 
