@@ -7,6 +7,7 @@ class TargetsController < ApplicationController
 
   def new
     @target = Target.new
+
   end
 
   def create
@@ -15,6 +16,7 @@ class TargetsController < ApplicationController
   end
 
   def show
+    @target = Target.find(params[:id])
   end
 
   def category_search
@@ -22,7 +24,10 @@ class TargetsController < ApplicationController
     @targets = Target.where(genre:@keyword).order("time DESC")
   end
 
-
+  def feature_search
+    @keyword = params[:keyword]
+    @targets = Target.where(feature:@keyword).order("time DESC")
+  end
 
   private
   def target_params

@@ -1,0 +1,32 @@
+.index-show
+  .index-show__flame
+    .index-show__flame__top
+      .index-show__flame__top__in
+        = "ジャンル:#{@target.genre}"
+      .index-show__flame__top__in
+        = "特徴:#{@target.feature}"
+      .index-show__flame__top__in
+        = "必要な時間:#{@target.time}"
+
+
+    .index-show__flame__top2
+      .index-show__flame__top__img
+        =image_tag @target.img , size:'300x200'
+      .index-show__flame__top__text
+        = "タイトル:#{@target.title}"
+
+    .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
+
+    .index-show__flame__top4
+      .index-show__flame__top4__in
+        .index-show__flame__top4__in__left kkkk
+        .index-show__flame__top4__in__left lllll
+      .index-show__flame__top4__in2 こここk
+    
+    .index-show__flame__send
+      = form_for("") do |f|
+        .index-show__flame__send__input
+          = f.text_field :time , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
+          
+        .index-show__flame__send__btn
+          = f.submit "how to共有" , class:"input-btn"

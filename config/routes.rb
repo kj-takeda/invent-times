@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :targets do
     collection do
       get 'category_search'
+      get 'feature_search'
     end
   end
 

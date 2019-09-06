@@ -7,14 +7,14 @@
       .index__serch__top__box.none1
         = form_tag(category_search_targets_path, method: :get) do
           = label_tag :genre , "ジャンル検索" , class:"index__serch__top__box__label"
-          = select_tag :genre , options_for_select([["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ]) , :prompt => "選択してください" , class:"index__serch__top__box__select" , name:"keyword"
+          = select_tag :genre , options_for_select([["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ]) , :prompt => "選択してください" , name:"keyword"
           = submit_tag "検索" , class:"index__serch__top__box__btn"
 
       .index__serch__top__box.none2
-        = form_for("") do |f|
-          = f.label :genre , "特徴検索" , class:"index__serch__top__box__label"
-          = f.select :genre , [["ITスキル", "ITスキル"], ["言語", "言語"], ["資格勉強", "資格勉強"] , ["仕事全般", "仕事全般"] , ["スポーツ", "スポーツ"], ["小学生向け", "小学生向け"] , ["シニア向け", "シニア向け"] , ["遊び", "遊び"] ] , :prompt => "選択してください"
-          = f.submit '検索する' , class:"index__serch__top__box__btn"
+        = form_tag(feature_search_targets_path , method: :get) do |f|
+          = label_tag :feature , "特徴検索" , class:"index__serch__top__box__label"
+          = select_tag :feature , options_for_select([["コツコツ系", "コツコツ系"], ["短期集中向き", "短期集中向き"], ["女性に人気", "女性に人気"], ["年単位で努力", "年単位で努力"] ]) , :prompt => "選択してください" , name:"keyword"
+          = submit_tag '検索する' , class:"index__serch__top__box__btn"
       
   .index__flame
     -@targets.each do |target|
@@ -28,7 +28,11 @@
             = target.title
           .index__flame__main__img
             = image_tag target.img , size:'400x200'
-          .index__flame__main__btn お気に入りに追加する
-          .index__flame__main__btn 詳しく見る    
+          
+          =link_to target_path(target) do
+            .index__flame__main__btn お気に入りに追加する
+          
+          =link_to target_path(target) do
+            .index__flame__main__btn 詳しく見る
 
 .index__pagenation

@@ -111,25 +111,24 @@
         float:left;
         text-align: center;
       }
-      &__img{
-        float:left;
-      }
+        &__img{
+          float:left;
+        }
 
-      &__btn{
-        width:30%;
-        height:50px;
-        float:left;
-        border:solid;
-        margin-left:20px;
-        margin-top:30px;
-        background: #668ad8;/*ボタン色*/
-        color: #FFF;
-        border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
-        border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
-        line-height:50px;
-        text-align:center; 
+          &__btn{
+          width:30%;
+          height:50px;
+          float:left;
+          border:solid;
+          margin-left:20px;
+          margin-top:30px;
+          background: #668ad8;/*ボタン色*/
+          color: #FFF;
+          border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
+          border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+          line-height:50px;
+          text-align:center; 
       }
-
     }
     }
   }
@@ -148,11 +147,11 @@
     margin-top:5px;
   }
   
-.none2{
+.none1{
 display:none;
   }
 
-.no2{//特徴ボタンの見た目
+.no{//特徴ボタンの見た目
   background-color: grey;
   background: gray;/*ボタン色*/
       color: #FFF;
