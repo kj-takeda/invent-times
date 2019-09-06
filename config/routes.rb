@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   root to: 'periods#new'
   resources :users
   resources :targets do
+    resources :howtos
     collection do
       get 'category_search'
       get 'feature_search'

@@ -17,6 +17,7 @@ class TargetsController < ApplicationController
 
   def show
     @target = Target.find(params[:id])
+    @howto = Howto.new
   end
 
   def category_search
