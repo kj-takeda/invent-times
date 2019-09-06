@@ -24,9 +24,9 @@
       .index-show__flame__top4__in2 こここk
     
     .index-show__flame__send
-      = form_for("") do |f|
+      - form_for(@howto) do |f|
         .index-show__flame__send__input
-          = f.text_field :time , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
+          = f.text_field :comment , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
           
         .index-show__flame__send__btn
-          = f.submit "how to共有" , class:"input-btn"
+          = f.submit "how to共有" , new_howto_path , class:"input-btn"
