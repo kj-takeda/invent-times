@@ -1,8 +1,8 @@
 class TargetsController < ApplicationController
+  PER = 5
 
   def index
-    @targets = Target.all
-    @target = Target.page(params[:page]).per(5)
+    @targets = Target.order(time: "DESC")
   end
 
   def new
@@ -21,10 +21,12 @@ class TargetsController < ApplicationController
     
   end
 
-  def search
+  def category_search
     @keyword = params[:keyword]
-    @targets = Target.where(genre:@keyword).order("time DESC").page(params[:page]).per(PER)
+    @targets = Target.where(genre:@keyword).order("time DESC")
   end
+
+
 
   private
   def target_params

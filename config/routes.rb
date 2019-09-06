@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :targets do
     collection do
-      get 'search'
+      get 'category_search'
     end
   end
 
