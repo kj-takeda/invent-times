@@ -16,7 +16,6 @@ Rails.application.routes.draw do
       get 'feature_search'
     end
   end
-
-  resources :howtos
+  
   resources :periods
 end

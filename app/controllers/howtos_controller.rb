@@ -5,7 +5,7 @@ class HowtosController < ApplicationController
 
   def create
    @target = Target.find(params[:target_id])
-    @howto = Howto.create(howto_params)
+   @howto = Howto.create(howto_params)
   end
 
   private

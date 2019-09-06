@@ -15,12 +15,6 @@
         = "タイトル:#{@target.title}"
 
     .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
-
-    .index-show__flame__top4
-      .index-show__flame__top4__in
-        .index-show__flame__top4__in__left kkkk
-        .index-show__flame__top4__in__left lllll
-      .index-show__flame__top4__in2 こここk
     
     .index-show__flame__send
       = form_for [@target , @howto ] do |f|
@@ -29,3 +23,16 @@
           = f.text_field :share , class:"input-com2" , placeholder:"参考URLをコピペしてください",maxlength:"200"
         .index-show__flame__send__btn
           = f.submit "how to共有" , class:"input-btn"
+    
+  -@target.howtos.each do |howto| 
+    .index-show__flame__top4
+      .index-show__flame__top4__in
+        = howto.user.name
+
+      .index-show__flame__top4__in
+        -if current_user.id == howto.user_id
+          =link_to "編集" , edit_target_howto_path(@target)
+          =link_to "削除" , target_howto_path(@target)
+
+      .index-show__flame__top4__in2
+        = howto.comment
