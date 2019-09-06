@@ -2,7 +2,6 @@
   height:100px;
   width:1000px;
   display:flex;
-  border:solid;
   border-width: 1px;
   color:grey;
   border-radius: 10px;
@@ -81,7 +80,6 @@
     line-height:32px;
     background-color: #FFEEFF;
     text-align: center;
-    border:solid;
     border-width: 1px;
       &__link{
         text-decoration: none;
@@ -100,6 +98,7 @@
 margin-top:17px;
 text-align: center;
 line-height: 25px;
+border:solid;
   }  
 }
 
