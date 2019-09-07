@@ -2,6 +2,7 @@
   height:100px;
   width:1000px;
   display:flex;
+  border:solid;
   border-width: 1px;
   color:grey;
   border-radius: 10px;
@@ -80,6 +81,7 @@
     line-height:32px;
     background-color: #FFEEFF;
     text-align: center;
+    border:solid;
     border-width: 1px;
       &__link{
         text-decoration: none;
@@ -89,18 +91,11 @@
 }
 
 &__user-info{
-  height:70px;
+  height:100px;
   width:10%;
   display:block;
   background-color:lightgray;
-  border:solid;
-  &__name{
-margin-top:17px;
-text-align: center;
-line-height: 25px;
-border:solid;
-  }  
-}
+  }
 }
 
 .headr-logo{
@@ -108,11 +103,11 @@ border:solid;
   width:100%;
 }
 
-.fa-3x{
+.fa-5x{
   display:block;
   color:black;
-  height:50%;
+  height:95%;
   width:100%;
-  padding-left:25px;
+  padding-left:10px;
   padding-top:10px;
 }
