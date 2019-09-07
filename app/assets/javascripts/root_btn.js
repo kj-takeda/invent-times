@@ -1,10 +1,8 @@
 jQuery(document).on('turbolinks:load', function(){
   $(function(){
-    $('.index__serch__top__btn.no2').click(function () {
-
-
-      
+    $('.main__flame__form__btn').click(function () {
+      $(this).css('background' , 'grey')
+    $('.main').css('background' , 'white')
     })
-
    });
   });
