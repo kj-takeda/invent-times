@@ -12,7 +12,7 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find_by(target_id:params[:id])
     if @favorite.destroy
-      redirect_to controller: :targets, action: :index
+      redirect_to controller: :users, action: :show
     end
   end
 end

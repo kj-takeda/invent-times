@@ -15,7 +15,7 @@
           = label_tag :feature , "特徴検索" , class:"index__serch__top__box__label"
           = select_tag :feature , options_for_select([["コツコツ系", "コツコツ系"], ["短期集中向き", "短期集中向き"], ["女性に人気", "女性に人気"], ["年単位で努力", "年単位で努力"] ]) , :prompt => "選択してください" , name:"keyword"
           = submit_tag '検索する' , class:"index__serch__top__box__btn"
-      
+
   .index__flame
     -@targets.each do |target|
       -if target.time <= current_user.periods.last.time

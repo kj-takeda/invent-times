@@ -152,3 +152,11 @@ display:none;
   background:grey;/*ボタン色*/
   border-right: solid 5px grey;/*ボタン色より暗めに*/
 }
+
+.btn2{//一覧のみお気に入り解除ボタン非表示
+  display:none;
+}
+
+.btn4{//・・ユーザー詳細ではお気に入り非表示
+  display:none;
+}
