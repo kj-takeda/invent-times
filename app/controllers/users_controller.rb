@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+   @targets = current_user.favorites
   end
   
 end

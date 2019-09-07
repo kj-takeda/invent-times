@@ -1,4 +1,5 @@
 class Target < ApplicationRecord
   has_many :howtos
-  belongs_to :user
+  has_many :favorites
+  has_many :users,through: :favorits
 end
