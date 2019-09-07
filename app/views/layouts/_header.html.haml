@@ -17,9 +17,11 @@
     .header__btns__li
       =link_to "ユーザー情報編集" ,  edit_user_registration_path(current_user) , class:"header__btns__li__link"
     .header__btns__li
-      =link_to "お気に入り" , "" , class:"header__btns__li__link"
+      =link_to "お気に入り" , user_path(current_user) , class:"header__btns__li__link"
     .header__btns__li
       =link_to "ログアウト" , destroy_user_session_path , class:"header__btns__li__link" , method: :delete
 
   .header__user-info
-    %i.fa.fa-user.fa-5x
+    %i.fa.fa-user.fa-3x
+    .header__user-info__name
+      = current_user.name
