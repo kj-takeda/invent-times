@@ -8,6 +8,7 @@
       .index-show__flame__top__in
         = "必要な時間:#{@target.time}"
 
+
     .index-show__flame__top2
       .index-show__flame__top__img
         =image_tag @target.img , size:'300x200'
@@ -15,24 +16,17 @@
         = "タイトル:#{@target.title}"
 
     .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
-    
-    .index-show__flame__send
-      = form_for [@target , @howto ] do |f|
-        .index-show__flame__send__input
-          = f.text_field :comment , class:"input-com1" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
-          = f.text_field :share , class:"input-com2" , placeholder:"参考URLをコピペしてください",maxlength:"200"
-        .index-show__flame__send__btn
-          = f.submit "how to共有" , class:"input-btn"
-    
-  -@target.howtos.each do |howto| 
+
     .index-show__flame__top4
       .index-show__flame__top4__in
-        = howto.user.name
-
-      .index-show__flame__top4__in
-        -if current_user.id == howto.user_id
-          =link_to "編集" , edit_target_howto_path(@target)
-          =link_to "削除" , target_howto_path(@target)
-
-      .index-show__flame__top4__in2
-        = howto.comment
+        .index-show__flame__top4__in__left kkkk
+        .index-show__flame__top4__in__left lllll
+      .index-show__flame__top4__in2 こここk
+    
+    .index-show__flame__send
+      = form_for("") do |f|
+        .index-show__flame__send__input
+          = f.text_field :time , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
+          
+        .index-show__flame__send__btn
+          = f.submit "how to共有" , class:"input-btn"

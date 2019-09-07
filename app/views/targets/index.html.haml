@@ -29,12 +29,10 @@
           .index__flame__main__img
             = image_tag target.img , size:'400x200'
           
-          .index__flame__main__link
-            =link_to add_target_path(target) , method: :post do
-              .index__flame__main__btn.btn1 お気に入り
-            =link_to add_target_path(target) , method: :delete do
-              .index__flame__main__btn.btn2 お気に入り解除する
-            =link_to target_path(target) do
-              .index__flame__main__btn.btn3 詳しく見る
+          =link_to target_path(target) do
+            .index__flame__main__btn お気に入りに追加する
+          
+          =link_to target_path(target) do
+            .index__flame__main__btn 詳しく見る
 
 .index__pagenation

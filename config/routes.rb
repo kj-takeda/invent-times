@@ -9,17 +9,13 @@ Rails.application.routes.draw do
 
   root to: 'periods#new'
   resources :users
-
   resources :targets do
-  member do
-    post "add" , to: "favorites#create"
-    delete "add" , to: "favorites#destroy"
-  end
-  collection do
+    collection do
       get 'category_search'
       get 'feature_search'
     end
-    resources :howtos  
   end
+
+  resources :howtos
   resources :periods
 end

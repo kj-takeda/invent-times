@@ -26,8 +26,8 @@
       float:left;
       background: #668ad8;/*ボタン色*/
       color: #FFF;
+      border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
       border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
-      border-bottom: solid 5px #36528c;
       line-height:50px;
       text-align:center;
     }
@@ -54,7 +54,15 @@
       text-align:center;
       border-radius: 10px;
         }
-    
+        &__no2{//特徴ボタンの見た目
+          background-color: grey;
+          background: gray;/*ボタン色*/
+              color: #FFF;
+              border-bottom: solid 5px gray;/*ボタン色より暗めに*/
+              border-right: solid 5px gray;/*ボタン色より暗めに*/
+              line-height:50px;
+              text-align:center;
+        }
 
         
         }
@@ -66,7 +74,6 @@
   margin:auto;
   background-color: #FFEEFF;
   margin-top:25px;
-  margin-bottom:60px;
   color:gray;
   border-radius: 10px;
     &__main{
@@ -99,7 +106,7 @@
       &__title{
         width:70%;
         height:30px;
-        font-size:20px;
+        font-size:px;
         line-height:30px;
         float:left;
         text-align: center;
@@ -107,18 +114,14 @@
         &__img{
           float:left;
         }
-        &__link{
-          width:35%;
-          height:200px;
-          float:right;
-        }
 
           &__btn{
-          width:70%;
+          width:30%;
           height:50px;
-          
-          
+          float:left;
           border:solid;
+          margin-left:20px;
+          margin-top:30px;
           background: #668ad8;/*ボタン色*/
           color: #FFF;
           border-bottom: solid 5px #36528c;/*ボタン色より暗めに*/
@@ -144,11 +147,16 @@
     margin-top:5px;
   }
   
-.none2{
+.none1{
 display:none;
-}
+  }
 
-.no2{//特徴ボタンの見た目
-  background:grey;/*ボタン色*/
-  border-right: solid 5px grey;/*ボタン色より暗めに*/
+.no{//特徴ボタンの見た目
+  background-color: grey;
+  background: gray;/*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 5px gray;/*ボタン色より暗めに*/
+      border-right: solid 5px gray;/*ボタン色より暗めに*/
+      line-height:50px;
+      text-align:center;
 }
