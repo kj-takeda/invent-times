@@ -1,0 +1,21 @@
+.index
+  .index__flame
+    -@targets.each do |target|
+      -if target.time <= current_user.periods.last.time
+        .index__flame__main
+          .index__flame__main__genre
+            = "ジャンル:#{target.genre}"
+          .index__flame__main__time
+            = "投資時間:#{target.time}"
+          .index__flame__main__title
+            = target.title
+          .index__flame__main__img
+            = image_tag target.img , size:'400x200'
+          
+          =link_to target_path(target) do
+            .index__flame__main__btn お気に入りに追加する
+          
+          =link_to target_path(target) do
+            .index__flame__main__btn 詳しく見る
+
+.index__pagenation

@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @targets = Target.all
   end
   
 end

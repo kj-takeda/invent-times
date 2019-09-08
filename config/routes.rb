@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get 'category_search'
       get 'feature_search'
     end
+    resources :howtos
   end
 
   resources :howtos

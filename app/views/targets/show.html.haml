@@ -16,17 +16,17 @@
         = "タイトル:#{@target.title}"
 
     .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
-
+    
+    .index-show__flame__send
+      = form_for [@target , @howto] do |f|
+        .index-show__flame__send__input
+          = f.text_field :comment , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
+          
+        .index-show__flame__send__btn
+          = f.submit "how to共有" , class:"input-btn"
+    
     .index-show__flame__top4
       .index-show__flame__top4__in
         .index-show__flame__top4__in__left kkkk
         .index-show__flame__top4__in__left lllll
       .index-show__flame__top4__in2 こここk
-    
-    .index-show__flame__send
-      = form_for("") do |f|
-        .index-show__flame__send__input
-          = f.text_field :time , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
-          
-        .index-show__flame__send__btn
-          = f.submit "how to共有" , class:"input-btn"
