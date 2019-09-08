@@ -25,8 +25,11 @@
         .index-show__flame__send__btn
           = f.submit "how to共有" , class:"input-btn"
     
+  - @target.howtos.each do |a|
     .index-show__flame__top4
       .index-show__flame__top4__in
-        .index-show__flame__top4__in__left kkkk
-        .index-show__flame__top4__in__left lllll
+        .index-show__flame__top4__in__left
+          =a.comment
+        .index-show__flame__top4__in__left
+
       .index-show__flame__top4__in2 こここk
