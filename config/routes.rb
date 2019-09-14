@@ -14,6 +14,10 @@ Rails.application.routes.draw do
       get 'category_search'
       get 'feature_search'
     end
+    member do
+      post "add" , to: "favorites#create"
+      delete "add" , to: "favorites#destroy"
+    end
     resources :howtos
   end
   
