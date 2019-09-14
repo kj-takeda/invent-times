@@ -7,8 +7,12 @@ class PeriodsController < ApplicationController
   end
 
   def create
-    Period.create(period_params)  
-    redirect_to controller: :targets, action: :index
+    @period = Period.new(period_params) 
+    if @period.save
+      redirect_to controller: :targets, action: :index
+    else
+      redirect_to action: :new
+    end
   end
 
   private
