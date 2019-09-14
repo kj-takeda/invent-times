@@ -70,7 +70,7 @@ gem 'haml-rails'
 gem "jquery-rails"
 gem 'bootstrap-sass'
 gem 'kaminari'
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'compass-rails', '3.1.0'
 gem 'sprockets', '3.7.2'
 gem 'font-awesome-sass', '~> 5.4.1'
