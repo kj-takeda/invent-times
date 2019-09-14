@@ -1,3 +1,3 @@
 
-json.comment @howto.comment
-json.user_name @howto.user.name
+json.comment @howtos.comment
+json.user_name @howtos.user.name

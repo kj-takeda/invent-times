@@ -1,18 +1,18 @@
 $(document).on('turbolinks:load', function(){
-  //function buildHTML(date){
+  function buildHTML(date){
 
-    //var html = `<div class="index-show__flame__top4__in">
-      //              <div class="index-show__flame__top4__in__left">
-        //              ${ date.user_name}
-          //          </div>
-            //        <div class="index-show__flame__top4__in__left">
-             //       </div>
-              //      <div class="index-show__flame__top4__in2">
-                //      ${ date.comment}
-                  //  </div>
-                 // </div>`;
-          //return html;
-       // }
+    var html = `<div class="index-show__flame__top4__in">
+                  <div class="index-show__flame__top4__in__left">
+                    ${ date.user_name}
+                  </div>
+                  <div class="index-show__flame__top4__in__left">
+                  </div>
+                  <div class="index-show__flame__top4__in2">
+                    ${ date.comment}
+                  </div>
+                </div>`
+          return html;
+       }
   $('.new_howto').on('submit', function(e){
     e.preventDefault();
     var howto = new FormData(this);
@@ -26,11 +26,8 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(date){
-    console.log(date)
-
-     // var html = buildHTML(data);
-     // $('.index-show__flame__top4').append(html);
-      
+    var html = buildHTML(data);
+    $('.index-show__flame__top4').append(html);
     })
   })
 });

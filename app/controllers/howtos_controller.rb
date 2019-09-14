@@ -6,8 +6,8 @@ class HowtosController < ApplicationController
   def create
     
     @target = Target.find(params[:target_id])
-    @howto = @target.howtos.new(howto_params)
-    if @howto.save
+    @howtos = @target.howtos.new(howto_params)
+    if @howtos.save
       respond_to do |format|
         format.json        
       end
