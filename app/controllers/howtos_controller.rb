@@ -4,9 +4,15 @@ class HowtosController < ApplicationController
   end
 
   def create
+    
     @target = Target.find(params[:target_id])
-    @target.howtos.create(howto_params)
-  end
+    @howto = @target.howtos.new(howto_params)
+    if @howto.save
+      respond_to do |format|
+        format.json        
+      end
+    end
+end
 
   private
   def howto_params

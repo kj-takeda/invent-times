@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     end
     resources :howtos
   end
-
-  resources :howtos
+  
   resources :periods
 end
