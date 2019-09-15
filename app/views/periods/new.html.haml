@@ -5,7 +5,11 @@
       %p.main__flame__word__p 時間と興味に応じた自己投資を提案します
     .main__flame__form
       = form_for(@period) do |f|
-        = f.text_field :time , class:"main__flame__form__input" , placeholder:"        (例)1000 max10000",maxlength:"5"
+        = f.text_field :time , class:"main__flame__form__input" , placeholder:"半角数字 1~10000",maxlength:"5"
         = f.label :time , "時間" , class:"main__flame__form__text"
         = f.submit "時間確定" , class:"main__flame__form__btn"
-        
+      
+  =link_to destroy_user_session_path , class:"main__logout" , method: :delete do
+    .main__logout__div ログアウト
+  =link_to  new_target_path , class:"main__logout" do
+    .main__logout__div 時間の有効活用を投稿
