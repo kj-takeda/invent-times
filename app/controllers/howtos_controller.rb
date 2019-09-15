@@ -1,10 +1,6 @@
 class HowtosController < ApplicationController
 
-  def index
-  end
-
   def create
-    
     @target = Target.find(params[:target_id])
     @howtos = @target.howtos.new(howto_params)
     if @howtos.save

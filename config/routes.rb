@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   end
 
   root to: 'periods#new'
-  resources :users
-  resources :targets do
+  resources :users,only:[:show]
+  resources :targets,except:[:destroy,:edit,:update] do
     collection do
       get 'category_search'
       get 'feature_search'
@@ -18,8 +18,8 @@ Rails.application.routes.draw do
       post "add" , to: "favorites#create"
       delete "add" , to: "favorites#destroy"
     end
-    resources :howtos
+    resources :howtos,only:[:create]
   end
   
-  resources :periods
+  resources :periods,only:[:new,:create]
 end
