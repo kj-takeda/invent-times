@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: invent_times_production
-  username: invent_times
-  password: <%= ENV['INVENT_TIMES_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

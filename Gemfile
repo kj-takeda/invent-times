@@ -67,6 +67,10 @@ group :development, :test do
   gem 'pry-doc'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'haml-rails'
 gem "jquery-rails"
 gem 'bootstrap-sass'
