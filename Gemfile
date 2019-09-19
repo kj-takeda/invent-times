@@ -82,3 +82,5 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem 'font-awesome-rails'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+
+gem "rails_12factor", group: :production
