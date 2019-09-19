@@ -61,10 +61,14 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'haml-rails'
@@ -78,3 +82,5 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem 'font-awesome-rails'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+
+gem "rails_12factor", group: :production
