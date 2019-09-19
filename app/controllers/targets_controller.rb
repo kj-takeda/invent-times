@@ -11,8 +11,12 @@ class TargetsController < ApplicationController
   end
 
   def create
-    @target = Target.create(target_params)
-    redirect_to action: :new
+    @target = Target.new(target_params)
+    if @target.save
+      redirect_to controller: :periods, action: :new
+    else
+      redirect_to action: :new
+    end
   end
 
   def show
