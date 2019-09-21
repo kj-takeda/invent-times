@@ -4,10 +4,24 @@ class HowtosController < ApplicationController
     @target = Target.find(params[:target_id])
     @howtos = @target.howtos.new(howto_params)
     if @howtos.save
-      respond_to do |format|
-        format.json        
-      end
+      redirect_to controller: 'targets', action: 'show'
     end
+end
+
+def edit
+  @target = Target.find(params[:target_id])
+  @howto = Howto.find(params[:id])
+end
+
+def update
+  @target = Target.find(params[:target_id])
+  @howto = Howto.find(params[:id])
+  
+  if @howto.update(howto_params)
+    redirect_to  target_path(@target)
+  else
+    render 'edit'
+  end
 end
 
   private
