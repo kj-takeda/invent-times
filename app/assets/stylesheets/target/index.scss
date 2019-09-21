@@ -71,9 +71,8 @@
   
     &__main{
       width:100%;
-      height:295px;
+      height:265px;
       border:solid;
-      
       margin:auto;
       margin-top:20px;
       background-color: #FFEEFF;
@@ -81,31 +80,43 @@
       &__genre{
         width:30%;
       height:30px;
-      font-size:15px;
+      font-size:12px;
       line-height:30px;
       color:red;
-      margin-top:10px;
       text-align: center;
+      float:left;
       }
       &__time{
-        display:inline-block;
         width:20%;
         height:30px;
-        font-size:18px;
+        font-size:12px;
         line-height:30px;
-        float:left;
         color:gold;
         text-align: center;
+        float:left;
+        display:block;
       }
+      &__delete{
+        width:30%;
+      height:30px;
+      font-size:12px;
+      line-height:30px;
+      text-align: center;
+      float:left;
+      color:blue;
+      display:block;
+      text-decoration: none;
+      }
+
       &__title{
-        width:70%;
+        width:100%;
         height:30px;
         font-size:px;
         line-height:30px;
         float:left;
         text-align: center;
       }
-        &__img{
+      &__img{
           float:left;
         }
 

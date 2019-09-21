@@ -6,8 +6,11 @@
           = "ジャンル:#{target.genre}"
         .index__flame__main__time
           = "投資時間:#{target.time}"
+        .index__flame__main__delete
+          = link_to "投稿を削除する" , target_path(target)
         .index__flame__main__title
           = target.title
+        
         .index__flame__main__img
           = image_tag target.img , size:'400x200'
           

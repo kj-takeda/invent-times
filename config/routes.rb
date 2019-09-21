@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'periods#new'
   resources :users,only:[:show]
-  resources :targets,except:[:destroy,:edit,:update] do
+  resources :targets,except:[:edit,:update] do
     collection do
       get 'category_search'
       get 'feature_search'
