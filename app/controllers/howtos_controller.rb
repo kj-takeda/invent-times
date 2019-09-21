@@ -19,6 +19,8 @@ def update
   
   if @howto.update(howto_params)
     redirect_to  target_path(@target)
+  else
+    render 'edit'
   end
 end
 
