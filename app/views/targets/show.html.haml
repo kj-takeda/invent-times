@@ -31,6 +31,6 @@
           =howto.user.name
         .index-show__flame__top4__in__left
           =link_to "編集" , edit_target_howto_path(@target,howto) , class:"link" if current_user == howto.user
-          =link_to "削除" , target_howto_path(@target,howto) , method: :delete , class:"link" if current_user == howto.user
+          =link_to "削除" ,  target_howto_path(@target,howto) , method: :delete , class:"link" if current_user == howto.user
       .index-show__flame__top4__in2
         =howto.comment

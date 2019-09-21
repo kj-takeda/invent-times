@@ -1,0 +1,11 @@
+.index-show
+  .index-show__flame
+    .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
+    
+    .index-show__flame__send
+      = form_for [@target , @howto] do |f|
+        .index-show__flame__send__input
+          = f.text_field :comment , class:"input-com" , placeholder:"(例)テックキャンプまじおすすめ プログラミンそんなに難しくないよ",maxlength:"200"
+          
+        .index-show__flame__send__btn
+          = f.submit "how to共有" , class:"input-btn"

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       post "add" , to: "favorites#create"
       delete "add" , to: "favorites#destroy"
     end
-    resources :howtos,only:[:create,:edit,:destroy]
+    resources :howtos,only:[:create,:edit,:destroy,:update]
   end
   
   resources :periods,only:[:new,:create]
