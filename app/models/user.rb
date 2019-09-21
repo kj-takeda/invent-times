@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :howtos
   has_many :periods
-
   has_many :favorites , dependent: :destroy
   has_many :targets , through: :favorites
+
+  validates :name, presence: true
 end
