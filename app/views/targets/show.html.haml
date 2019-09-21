@@ -9,10 +9,12 @@
         = "必要な時間:#{@target.time}"
 
     .index-show__flame__top2
-      .index-show__flame__top__img
+      .index-show__flame__top2__img
         =image_tag @target.img , size:'300x200'
-      .index-show__flame__top__text
+      .index-show__flame__top2__title
         = "タイトル:#{@target.title}"
+        %br
+        = @target.text
 
     .index-show__flame__top3 ユーザーからのhow to情報とおすすめ度
     

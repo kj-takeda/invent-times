@@ -14,14 +14,14 @@
         
         .new-main__flame__form__box
           = f.label  :title , "取得可能なスキルを入力してください" , class:"new-main__flame__form__box__text"
-          = f.text_field :title , class:"new-main__flame__form__box__input" , placeholder:"(例)webエンジニアデビュー(例)TOEIC600点以上"
+          = f.text_field :title , class:"new-main__flame__form__box__input" , placeholder:"(例)webエンジニアデビュー※30文字まで"
         .new-main__flame__form__box
           = f.label  :time , "スキル取得にかかる時間を入力してください" , class:"new-main__flame__form__box__text"
-          = f.text_field :time , class:"new-main__flame__form__box__input" , placeholder:"(例)60h 100h 400h"
+          = f.text_field :time , class:"new-main__flame__form__box__input" , placeholder:"(例)半角数字で入力してください 上限10000"
     
         .new-main__flame__form__box
           = f.label  :text , "スキルに関する詳細情報を入力してください" , class:"new-main__flame__form__box__text"
-          = f.text_field :text , class:"new-main__flame__form__box__input" , placeholder:"(例)誰でも3ヵ月で出来る　センスよりコツコツ努力が重要"
+          = f.text_field :text , class:"new-main__flame__form__box__input" , placeholder:"150文字以内"
 
         .new-main__flame__form__box
           = f.label  :img , "画像情報" , class:"new-main__flame__form__box__text"
